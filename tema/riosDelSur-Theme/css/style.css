@@ -1,0 +1,11 @@
+:root {
+  --primary-bg-color: #002F9E; /* Variable para el color de fondo principal */
+  --primary-text-color: #FEFEFE;
+}
+
+body.custom-bg {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: var(--primary-text-color);
+}
