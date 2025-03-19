@@ -7,83 +7,86 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?004">
     <title><?php bloginfo('name'); ?></title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <?php wp_head(); ?>
 </head>
-
-<body class="custom-bg">
-    <video autoplay muted loop id="background-video">
-        <source src="<?php echo get_template_directory_uri(); ?>/assets/video/background.mp4" type="video/mp4">
-        Tu navegador no soporta el video en HTML5.
-    </video>
-    <video autoplay="true" muted="true" loop="true" playsinline="playsinline" id="background-video-movil">
-        <source src="<?php echo get_template_directory_uri(); ?>/assets/video/background_movil.mp4" type="video/mp4">
-        Tu navegador no soporta el video en HTML5.
-    </video>
-
-    <!-- Sidebar -->
-    <div id="mySidebar" class="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">&times;</span>
-        <ul>
-            <li><a href="<?php echo get_site_url(); ?>">Inicio</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/nosotros/">Nosotros</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/requisitos/">Requisitos</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/mision-vision/">Quiénes Somos</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/apan/">Apan</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/pachuca/">Pachuca</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/tepeji/">Tepeji</a></li>
-            <li><a href="<?php echo get_site_url(); ?>/tula/">Tula</a></li>
-        </ul>
-    </div>
-
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <a href="<?php echo get_site_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo3.png" alt="Logo Empenos Rios" class="logo">
+<body>
+    <header class="header-custom fixed-top">
+        <nav class="navbar-custom navbar">
+            <div class="container-fluid header-title">
+                <span id="full-date" class="navbar-title"></span>
+                <div class="social-icons header-icons header-bar">
+                    <a href="#" class="social-icon col-hidden-lg" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>  
+                    <a href="https://wa.me/1234567890" target="_blank" class="social-icon"> 
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-spotify"></i>
                     </a>
                 </div>
             </div>
-            <div class="container d-flex justify-content-between align-items-center icons-link">
-                <div class="social-icons">
-                    <div class="col-auto">
-                        <a href="javascript:void(0)" onclick="openSidebar()">
-                            <span class="menu-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
-                                    <rect x="3" y="6" width="18" height="2"></rect>
-                                    <rect x="3" y="11" width="18" height="2"></rect>
-                                    <rect x="3" y="16" width="18" height="2"></rect>
-                                </svg>
-                            </span>
-                            <span class="menu-text">Menú</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="social-icons">
-                    <div class="col-auto">
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/profile.php?id=100063655026370" target="_blank">
-                            <img class="social-icons-item" src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.png" alt="">
-                        </a>
-                        <!-- YouTube -->
-                        <a href="https://www.youtube.com/@Empe%C3%B1osRio-h3k" target="_blank">
-                            <img class="social-icons-item" src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.png" alt="">
-                        </a>
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/empenosrioapan/profilecard/?igsh=MXNuY3R5OHVtcGp1aA==" target="_blank">
-                            <img class="social-icons-item" src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="">
-                        </a>
-                        <!-- TikTok -->
-                        <a href="https://www.tiktok.com/@empenosrio?is_from_webapp=1&sender_device=pc" target="_blank">
-                            <img class="social-icons-item" src="<?php echo get_template_directory_uri(); ?>/assets/img/tik-tok.png" alt="">
-                        </a>
-                    </div>
-                </div>
+        </nav>
+        <div class="banner-container container-fluid" class="centered-image">
+            <div class="container-fluid text-center">
+                <a class="navbar-brand" href="#">
+                    <img src="https://wp-test.duck-hack.cloud/wp-content/uploads/2025/03/1292a7c1-797e-4c4e-b33e-53b2db9a5d2f-removebg-preview.png" alt="Logo_riosDelsur" class="header-logo">
+                </a>
+            </div>
+        </div >
+        <div class="container-fluid text-center navbar-container collapse" id="navbarToggleExternalContent">
+            <div class="row title-container-navbar">
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Inicio
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Noticias
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                La copa
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Columnas
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Ticket
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Noticias
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                First Class
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                SOS
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Versión Digital
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
+                Fin de Semana
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-frame">
             </div>
         </div>
+        </div >
     </header>
