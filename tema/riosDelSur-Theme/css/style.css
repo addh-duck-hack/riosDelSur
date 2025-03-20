@@ -69,7 +69,6 @@ body.custom-bg {
   padding: 2px 2px 2px 2px !important;
 }
 
-
 .margin-top-carousel{
   margin-top: 135px;
 }
@@ -84,7 +83,6 @@ body.custom-bg {
   margin-left: 0px;
   margin-right: 0px;
 }
-
 
 .carousel-control-prev{
   left: 50px!important;
@@ -261,8 +259,6 @@ footer {
   .col-hidden-lg {
       display: none;
   }
-  
-  
 }
 
 @media (max-width: 768px) {
@@ -299,5 +295,13 @@ footer {
 
   .height-container-news-box{
     height: auto;
+  }
+  .social-icons{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .social-icon{
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
